@@ -58,9 +58,11 @@ box-icon{
   margin: 0px 15px;
 }
 
+.navbar__presentation{
+  border-bottom: 2px solid red;
+}
 
 .navbar__explorar{
-  border-bottom: 2px solid red;
   transition: all 0.2s ease-in;
 }
 

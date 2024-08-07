@@ -6,7 +6,7 @@ export const RecipeItem = ({ nombre, porcion, descripcion, imagenId, categoria, 
     <li className='recipe__item'>
 
         <figure className='recipe__figure'>
-            <img src={`https://recetariomovil.000webhostapp.com/imgrecetas/${ imagenId }`} alt={`${ nombre }`} />
+            <img src={`https://firebasestorage.googleapis.com/v0/b/react-firebase-alurageek.appspot.com/o/recetas%2F${ imagenId }`} alt={`${ nombre }`} />
         </figure>
 
         <section className="recipe__content">

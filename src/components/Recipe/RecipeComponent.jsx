@@ -1,11 +1,11 @@
 import { SearchRecipeInput } from './SearchRecipeInput'
 import { ListRecipe } from './ListRecipe'
-import { Link, Navigate, useLocation, useParams } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { useRecipe } from '../../hooks/useRecipe'
 
 export const RecipeComponent = ({ categoria, query  }) => {
 
-  const { onFoodByCategory, searchText, recipeToRender, onInputChange, existsCategoryInURL } = useRecipe( categoria, query )
+  const { onFoodByCategory, searchText, recipeToRender, onInputChange, existsCategoryInURL, onNextPage } = useRecipe( categoria, query )
 
   if( !existsCategoryInURL ) return <Navigate to={`/categorias`} /> 
 
@@ -25,8 +25,8 @@ export const RecipeComponent = ({ categoria, query  }) => {
                 onFoodByCategory={ onFoodByCategory }
             />
 
-            {/* <button onClick={ onBackPage } disabled={ page === 1 }>Atrás</button>
-            <button onClick={ onNextPage }>Siguiente</button> */}
+            {/* <button onClick={ onBackPage } disabled={ page === 1 }>Atrás</button> */}
+            {/* <button onClick={ onNextPage }>Siguiente</button> */}
 
             {/*  disabled={ disabledBtnByPage } */}
                 

@@ -8,7 +8,7 @@ export const useRecipe = ( categoria, q = '' ) => {
 
       const navigate = useNavigate();
 
-      const [state, setState] = useState({
+      const [ state, setState ] = useState({
 
         data: [],
         isLoading: true,
@@ -16,8 +16,6 @@ export const useRecipe = ( categoria, q = '' ) => {
 
       })
 
-      // Pagination
-      // const [ page, setPage ] = useState( 1 );
 
       // Search
       const [ searchText, setSearchText ] = useState( q );
@@ -33,6 +31,8 @@ export const useRecipe = ( categoria, q = '' ) => {
                 isLoading: false,
                 error: null,
               })
+
+              
             })
 
             .catch( err => {
@@ -45,23 +45,11 @@ export const useRecipe = ( categoria, q = '' ) => {
 
 
       }, [ categoria ])
+     
 
-      
-
-      // const totalPages = Math.ceil( state.data.length / 9 );
-      // const disabledBtnByPage = page >= totalPages;
       const recipeToRender = ( searchRecipe.length >= 1 ) ? searchRecipe : state.data;
       const existsCategoryInURL = initialCategorias.some( cat => cat.nombre === categoria );
     
-
-      // const onBackPage = () => {
-      //   setPage( page - 1 )
-      // }
-
-      // const onNextPage = () => {
-      //     setPage( ( currentPage )  + 1 )  
-          
-      // }
 
       const onInputChange = ({ target }) => {
   
@@ -86,22 +74,17 @@ export const useRecipe = ( categoria, q = '' ) => {
         navigate( -1 )
       }
 
-      
-    return{
 
+    return{
         data: state.data,
         isLoading: state.isLoading,
         error: state.error,
         onFoodByCategory,
         onNavigateBack,
         searchText,
-        // disabledBtnByPage,
         recipeToRender,
         existsCategoryInURL,
         onInputChange,
-        // onBackPage,
-        // onNextPage,
-        // page,
     }
 }
 
