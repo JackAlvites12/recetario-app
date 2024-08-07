@@ -5,7 +5,7 @@ export const CategorieItem = ({ nombre, img, onNavigateToCategoryDinamic}) => {
 
     <li key={ nombre } onClick={ () => onNavigateToCategoryDinamic( nombre ) }
         className='list__item' 
-        style={{ backgroundImage: `url(/src/assets/${ img } )`,
+        style={{ backgroundImage: `url(assets/categorias/${ img } )`,
              backgroundRepeat: 'no-repeat',
              }}><span className='item__title'>{ nombre }</span>
     </li>

@@ -24,11 +24,6 @@ export const RecipeComponent = ({ categoria, query  }) => {
                 categoria={ categoria }
                 onFoodByCategory={ onFoodByCategory }
             />
-
-            {/* <button onClick={ onBackPage } disabled={ page === 1 }>Atrás</button> */}
-            {/* <button onClick={ onNextPage }>Siguiente</button> */}
-
-            {/*  disabled={ disabledBtnByPage } */}
                 
         </section>
   )
