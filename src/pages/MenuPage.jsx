@@ -22,7 +22,7 @@ export const MenuPage = () => {
                     <span className='red'>Per</span><span className='light'>ua</span><span className='red'>nas</span>
                 </div>
                 <figure className='content__figure'>
-                    <img src="/src/assets/banner.png" alt="" />
+                    <img src="assets/categorias/banner.png" alt="" />
                 </figure>
             </div>
 
